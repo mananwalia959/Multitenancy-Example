@@ -1,0 +1,15 @@
+<div>
+
+    <div class="p-2 d-flex ">
+        <button class = " btn btn-secondary btn-lg btn-block" (click) = "addNewTodo()"> Add new Todo </button>
+    </div>
+
+    <div class="d-flex justify-content-between p-2 border border-info rounded-lg rounded m-1 pointer" *ngFor="let todo of todos" 
+    (click) = "openTodo(todo.todoId)">
+
+        <div class = "w-75 h-5 border-right border-secondary"> {{todo.description}} </div>
+        <div class = "w-25 h-5 pl-2 text-center"  [ngClass] = "todo.completed ? 'text-success': 'text-danger'" > {{todo.completed ? "Completed" : "Not Completed"}} </div>
+    </div>
+
+
+</div>
