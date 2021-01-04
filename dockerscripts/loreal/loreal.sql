@@ -19,6 +19,3 @@ GO
 
 insert into users(userid,username,password) values ('874bbeb6-c8c4-4d64-b2b7-a64a022c72db' , 'loreal' , 'y');
 GO
-
-
-insert into users(userid,username,password) values ('955d5e6b-6a9f-43f5-8c57-7350839fce1d' , 'acme' , 'x');
