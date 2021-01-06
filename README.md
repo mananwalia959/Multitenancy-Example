@@ -29,6 +29,8 @@ for ex: in windows , add the following lines in your **C:\Windows\System32\Drive
 docker-compose up --build --force-recreate
 ```
 
+Note : there are currently some problems with sqlserver image that causes it to not run the initial scripts at startup in the demo , this will be fixed soon , if you face any challenges just restart with the above command 
+
 </li>
 </ul>
 
