@@ -1,0 +1,14 @@
+@startuml
+actor user
+
+
+user -> MultiTenantTodosService :request
+
+database acme
+database loreal
+
+MultiTenantTodosService <--> acme
+MultiTenantTodosService <--> loreal
+
+
+@enduml

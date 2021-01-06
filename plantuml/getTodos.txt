@@ -1,0 +1,19 @@
+@startuml
+actor user
+
+
+user -> TenantInfoFilter 
+TenantInfoFilter -> TenantInfoFilter : add userid and tenantid in threadlocal
+
+TenantInfoFilter -> TodosService
+
+TodosService -> MultitenantConnectionProvider : getConnection();
+MultitenantConnectionProvider  -> MultitenantConnectionProvider : getTenantIdFromThreadLocal();
+MultitenantConnectionProvider  -> TodosService :   jdbc connection
+
+database acme
+database loreal
+TodosService -> acme : getTodos()
+
+TodosService -> user : Todos
+@enduml
